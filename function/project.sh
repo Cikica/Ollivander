@@ -10,14 +10,14 @@ function project () {
 	source $project_directory_variable_path
 	source $sublime_directory_variable_path
 	
-	if [[ $1 == "-p" ]] || [[ $1 == "--project_directory" ]]; then
+	if [[ $1 == "-p" ]] || [[ $1 == "--project_path" ]]; then
 		rm $project_directory_variable_path
 		echo "project_directory=\"$2\"" >> "$project_directory_variable_path"
 		echo "Project path set to : $2"
 		return
 	fi
 
-	if [[ $1 == "-s" ]] || [[ $1 == "--sublime_directory" ]]; then
+	if [[ $1 == "-s" ]] || [[ $1 == "--sublime_path" ]]; then
 		rm $sublime_directory_variable_path
 		echo "sublime_directory=\"$2\"" >> "$sublime_directory_variable_path"
 		echo "Sublime path set to : $2"

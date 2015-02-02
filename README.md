@@ -74,5 +74,41 @@ ALIAS :
 ```
 
 ### project
+
+Open sublime text projects. When giving a name of a project spaces are interpreted as underlines, so
+if you write *base style* the project should be called *base_style*
+
+This command requires some setup before it can be used. To set it up you just set the **project_path** and the **sublime_path**
+
+**Examples**
+```
+$ ollie@WAND-SHOP ~/tripalley
+project --project_path "$HOME/tripalley/projects"
+
+$ ollie@WAND-SHOP ~/tripalley
+Project path set to : /c/usr/ollie//tripalley/projects
+
+$ ollie@WAND-SHOP ~/tripalley
+project --sublime_path "/c/some/dir/to/Sublime Text 2/sublime_text.exe"
+
+$ ollie@WAND-SHOP ~/tripalley
+Sublime path set to : /c/some/dir/to/Sublime Text 2/sublime_text.exe
+
+$ ollie@WAND-SHOP ~/tripalley
+project your a god damn wizard harry
+```
+
+**Syntax**
+```
+project [OPTION | NAME]
+
+OPTION :
+	-p, --project_path <path>      Path to the directory where you store your .sublime-project files
+	-s, --sublime_path  <path>     Path to the sublime executable. Maku sure you have 
+	                               the sublime_text.exe in  it
+	-w, --where                    list the project path and sublime path
+	-l, --list                     list project names
+```
+
 ### ll
 ### cc
