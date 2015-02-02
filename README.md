@@ -59,6 +59,7 @@ $ ollie@WAND-SHOP ~/style
 goto js
 
 $ ollie@WAND-SHOP ~/js
+```
 
 **Syntax**
 ```
