@@ -1,0 +1,3 @@
+names=()
+paths=()
+exes=()
