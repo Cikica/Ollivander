@@ -50,12 +50,12 @@ function project () {
 	for iterated  in $( ls ); do
 		
 		project_name="$name.sublime-project"
-
 		if [[ $iterated == "$project_name" ]]; then
 
 			echo -e "Opening project $green_color$name$no_color"
-			'' "$project_name"
+			"$sublime_directory" "$project_name"
 			cd $current_working_directory
+			return
 		fi
 	done
 

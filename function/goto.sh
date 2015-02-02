@@ -78,6 +78,8 @@ function goto () {
 		echo "$names_string" >> "$names_variable_path"
 		echo "$paths_string" >> "$paths_variable_path"
 
+		echo "$path_name has been added"
+
 		return
 	fi
 

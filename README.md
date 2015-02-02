@@ -21,7 +21,7 @@ pc that has the same files and layout of the default _data_ folder.
 
 Put together it should look something like this.
 
-```shell
+```bash
 export SCRIPTDATA="some/path/somewhere/Ollivander/data"
 export SCRIPTPATH="some/path/somewhere/Ollivander"
 source "$SCRIPTPATH/functions.sh"
@@ -34,6 +34,44 @@ Onto the functions.
 ## Functions
 
 ### goto
+
+The purpose of __goto__ is to register paths with short aliases which allow you to jump between
+key directories quickly.
+
+**Examples**
+```
+$ ollie@WAND-SHOP ~/code
+goto --new style "dir/to/my/code/style"
+
+$ ollie@WAND-SHOP ~/code
+style has been added
+
+$ ollie@WAND-SHOP ~/code
+goto --new js "dir/to/my/code/somewhere/js"
+
+$ ollie@WAND-SHOP ~/code
+js has been added
+
+$ ollie@WAND-SHOP ~/code
+goto style
+
+$ ollie@WAND-SHOP ~/style
+goto js
+
+$ ollie@WAND-SHOP ~/js
+
+**Syntax**
+```
+goto [OPTION | ALIAS]
+
+OPTION : 
+  -n, --new <alias> <path>   add new alias for a file path
+  -w, --where                display all the aliases registered and paths to which they lead
+  -r, --remove <alias>       de register alias
+ALIAS :
+	Name of the alias to go to.
+```
+
 ### project
 ### ll
 ### cc
