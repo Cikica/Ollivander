@@ -33,6 +33,11 @@ Onto the functions.
 
 ## Functions
 
+ - [goto](#goto)
+ - [project](#project)
+ - [ll](#ll)
+ - [cc](#cc)
+
 ### goto
 
 The purpose of __goto__ is to register paths with short aliases which allow you to jump between
@@ -96,6 +101,9 @@ Sublime path set to : /c/some/dir/to/Sublime Text 2/sublime_text.exe
 
 $ ollie@WAND-SHOP ~/tripalley
 project your a god damn wizard harry
+
+$ ollie@WAND-SHOP ~/tripalley
+Opening project your_a_god_damn_wizard_harry
 ```
 
 **Syntax**
@@ -103,11 +111,12 @@ project your a god damn wizard harry
 project [OPTION | NAME]
 
 OPTION :
-	-p, --project_path <path>      Path to the directory where you store your .sublime-project files
-	-s, --sublime_path  <path>     Path to the sublime executable. Maku sure you have 
-	                               the sublime_text.exe in  it
-	-w, --where                    list the project path and sublime path
-	-l, --list                     list project names
+	-p, --project_path <path>   Path to the directory where you store your 
+                                .sublime-project files
+	-s, --sublime_path <path>   Path to the sublime executable. Maku sure you have 
+                                the sublime_text.exe in  it
+	-w, --where                 list the project path and sublime path
+	-l, --list                  list project names
 ```
 
 ### ll
