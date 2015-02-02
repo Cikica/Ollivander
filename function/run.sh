@@ -82,7 +82,7 @@ function run () {
 		echo "$paths_string" >> "$paths_variable_path"
 		echo "$executables_string" >> "$executables_variable_path"
 
-		echo "$path_name_to_be_removed has been added"
+		echo "$path_name has been added"
 
 		return
 	fi

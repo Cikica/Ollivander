@@ -35,8 +35,11 @@ Onto the functions.
 
  - [goto](#goto)
  - [project](#project)
+ - [run](#run)
  - [ll](#ll)
  - [cc](#cc)
+ - [rename](#rename)
+ - [empty](#empty)
 
 ### goto
 
@@ -108,7 +111,7 @@ Opening project your_a_god_damn_wizard_harry
 
 **Syntax**
 ```
-project [OPTION | NAME]
+project [OPTION|ALIAS]
 
 OPTION :
 	-p, --project_path <path>   Path to the directory where you store your 
@@ -117,7 +120,83 @@ OPTION :
                                 the sublime_text.exe in  it
 	-w, --where                 list the project path and sublime path
 	-l, --list                  list project names
+
+ALIAS :
+	Name of the project to open
+```
+### run
+
+Run executables registered with the command.
+
+**Examples**
+```
+$ ollie@WAND-SHOP ~/tripalley
+run --new firefox "/c/Program Files (x86)/Mozilla Firefox" "firefox.exe"
+
+$ ollie@WAND-SHOP ~/tripalley
+firefox has been added
+
+$ ollie@WAND-SHOP ~/tripalley
+run firefox
+
+$ ollie@WAND-SHOP ~/tripalley
+Running firefox
+```
+
+**Syntax**
+```
+run [OPTION|ALIAS]
+
+OPTION :
+	-l, --list                             Show all registered executables by alias, path, executable
+	-r, --remove <alias>                   Remove executable by alias
+	-n, --new <alias> <path> <executable>  Register new executable by giving alias under which it 
+	                                       it is called, the path to its executable file, and the
+	                                       name of its executable file.
+ALIAS :
+	Name of what to run.
 ```
 
 ### ll
+
+List folders and files in current directory, in a neat format ( directories on the left, files on the right )
+
+**Syntax**
+```
+ll
+```
+
 ### cc
+
+Change to a directory whose name resembles the given input
+
+**Examples**
+```
+$ ollie@WAND-SHOP ~/tripalley
+cc proj
+
+$ ollie@WAND-SHOP ~/tripalley/projects
+```
+
+**Syntax**
+```
+cc <name>
+```
+
+### rename
+
+Rename file or directory.
+
+**Syntax**
+```
+rename <file_or_directory> <name>
+```
+
+### empty
+
+Empties the specified folder
+
+**Syntax**
+```
+empty <name>
+```

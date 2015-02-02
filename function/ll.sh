@@ -1,4 +1,5 @@
 function ll () {
+	
 	text_length=25
 	directory_color="\e[1;31m";
 	file_color="\e[0;32m";
