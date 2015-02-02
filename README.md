@@ -72,7 +72,7 @@ goto [OPTION | ALIAS]
 
 OPTION : 
   -n, --new <alias> <path>   add new alias for a file path
-  -w, --where                display all the aliases registered and paths to which they lead
+  -l, --list                 display all the aliases registered and paths to which they lead
   -r, --remove <alias>       de register alias
 ALIAS :
 	Name of the alias to go to.

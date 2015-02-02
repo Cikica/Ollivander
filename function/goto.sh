@@ -8,7 +8,7 @@ function goto () {
 	source $names_variable_path
 	source $paths_variable_path 
 
-	if [[ $1 == "-w" ]] || [[ $1 == "--where" ]]; then
+	if [[ $1 == "-l" ]] || [[ $1 == "--list" ]]; then
 
 		text_length=25
 		name_color="\e[1;31m";
@@ -83,12 +83,12 @@ function goto () {
 		return
 	fi
 
-	name=$(printf "_%s" "$@")
-	name=${name:1}
+	name_to_find=$(printf "_%s" "$@")
+	name_to_find=${name_to_find:1}
 	count=-1
 	for name in "${names[@]}" ; do
 		((count++))
-		if [ $name == $1 ]
+		if [ $name == $name_to_find ]
 			then
 			printf "Going to %s \n" "$name"
 			goto="${paths[$count]}"
